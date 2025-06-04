@@ -16,32 +16,40 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.flex {
+  @apply flex;
+}
+
 .sidebar {
   @apply w-64 bg-white border-r border-gray-200 min-h-screen fixed left-0 top-0;
 }
 
 .sidebar-header {
-  @apply p-4 border-b border-gray-200 flex items-center gap-3;
+  @apply p-6 border-b border-gray-200 flex items-center gap-3;
 }
 
 .sidebar-header h1 {
-  @apply text-xl font-semibold text-primary;
+  @apply text-xl font-semibold text-gray-900;
 }
 
 .sidebar-menu {
-  @apply py-4;
+  @apply py-4 flex flex-col gap-1;
 }
 
 .sidebar-menu-item {
-  @apply flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-50 cursor-pointer;
+  @apply flex items-center gap-3 px-6 py-3 text-gray-600 hover:bg-gray-50 cursor-pointer text-sm font-medium;
 }
 
 .sidebar-menu-item.active {
-  @apply bg-primary text-white;
+  @apply text-primary border-l-4 border-primary bg-green-50;
+}
+
+.sidebar-menu-item i {
+  @apply w-5;
 }
 
 .main-content {
-  @apply ml-64 p-6;
+  @apply ml-64 p-8;
 }
 
 .stats-grid {
@@ -49,15 +57,15 @@ body {
 }
 
 .stat-card {
-  @apply bg-white p-6 rounded-lg shadow-sm;
+  @apply bg-primary bg-opacity-90 p-6 rounded-lg shadow-sm text-white;
 }
 
 .stat-card h3 {
-  @apply text-gray-500 text-sm font-medium mb-2;
+  @apply text-white text-sm font-medium mb-2 opacity-90;
 }
 
 .stat-card .value {
-  @apply text-3xl font-semibold text-gray-900;
+  @apply text-4xl font-semibold;
 }
 
 .table-container {
@@ -77,13 +85,39 @@ body {
 }
 
 .btn {
-  @apply px-4 py-2 rounded-md font-medium;
+  @apply px-4 py-2 rounded-md font-medium text-sm;
 }
 
 .btn-primary {
-  @apply bg-primary text-white hover:bg-primary-dark;
+  @apply bg-primary text-white hover:bg-primary-dark transition-colors;
 }
 
 .btn-secondary {
-  @apply bg-white text-gray-700 border border-gray-300 hover:bg-gray-50;
+  @apply bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 transition-colors;
+}
+
+/* Header styles */
+header {
+  @apply mb-8;
+}
+
+header h1 {
+  @apply text-2xl font-semibold text-gray-900 mb-1;
+}
+
+/* Utility classes */
+.justify-between {
+  @apply justify-between;
+}
+
+.items-center {
+  @apply items-center;
+}
+
+.gap-4 {
+  @apply gap-4;
+}
+
+.mb-8 {
+  @apply mb-8;
 }
