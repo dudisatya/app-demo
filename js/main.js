@@ -22,7 +22,7 @@ const state = {
 };
 
 // DOM Elements
-const contentEl = document.getElementById("content");
+const contentEl = document.querySelector("main.main-content");
 const sidebarItems = document.querySelectorAll(".sidebar-menu li");
 const newJobBtn = document.getElementById("new-job-btn");
 const newJobModal = document.getElementById("new-job-modal");

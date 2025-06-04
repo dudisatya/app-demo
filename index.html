@@ -45,6 +45,9 @@
             <h1 class="text-2xl font-semibold text-gray-900">Good Evening, User</h1>
           </div>
           <div class="flex gap-4">
+            <button id="new-job-btn" class="btn btn-primary">
+              <i class="fas fa-plus mr-2"></i> New Job
+            </button>
             <button class="btn btn-primary">
               <i class="fas fa-plus mr-2"></i> Add Project
             </button>
@@ -129,6 +132,29 @@
           </div>
         </div>
       </main>
+    </div>
+
+    <!-- New Job Modal -->
+    <div id="new-job-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Create New Job</h2>
+          <button class="close-modal">&times;</button>
+        </div>
+        <form id="new-job-form">
+          <div class="form-group">
+            <label for="client">Client</label>
+            <select id="client" name="client" required>
+              <option value="">Select a client</option>
+              <option value="new">+ Add New Client</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn cancel-btn">Cancel</button>
+            <button type="submit" class="btn btn-primary">Create Job</button>
+          </div>
+        </form>
+      </div>
     </div>
 
     <script type="module" src="/js/main.js"></script>
